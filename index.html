@@ -23,40 +23,92 @@
   <body>
     <header class="header">
       <div class="header__container container">
-          <nav class="header__nav">
-            <a class="header__logo" href="#"
-            ><img src="images/logo.png" alt="agency-logo" width="168" height="50"
-          /></a>                
-                  <ul class="menu">
-                      <li class="menu__item"><a href="#" class="menu__link link menu__link--current">HOME</a></li>
-                      <li class="menu__item"><a href="#" class="menu__link link ">SERVICES</a></li>
-                      <li class="menu__item"><a href="#" class="menu__link link ">PORTFOLIO</a></li>
-                      <li class="menu__item"><a href="#" class="menu__link link ">ABOUT</a></li>
-                      <li class="menu__item"><a href="#" class="menu__link link ">PRICING</a></li>
-                      <li class="menu__item"><a href="#" class="menu__link link ">CONTACT</a></li>
-                  </ul>
-                 
-          </nav>
-          <div class="wrap">
-              <form action="" class="search-bar">
-                <input type="search" name="search" pattern=".*\S.*" required>
-                <button class="search-btn" type="submit">
-                  <span>Search</span>
-                </button>
-              </form>
-          </div>
-          
+        <nav class="header__nav">
+          <a class="header__logo" href="#"
+            ><img
+              src="images/logo.png"
+              alt="agency-logo"
+              width="168"
+              height="50"
+          /></a>
+          <ul class="menu">
+            <li class="menu__item">
+              <a href="#" class="menu__link link menu__link--current">HOME</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link link">SERVICES</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link link">PORTFOLIO</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link link">ABOUT</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link link">PRICING</a>
+            </li>
+            <li class="menu__item">
+              <a href="#" class="menu__link link">CONTACT</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="search-block">
+          <form class ="search-form">
+            <input type="text" class="search-input" required />
+            <i class="fa fa-search search-icon"></i>
+            <span class="clear-btn" id="clear-btn">X</span>
+          </form>
+        </div>
       </div>
-          
-  </header>
-  <main>
-    <section class="hero">
-      <div class="hero__container container">
-        <img src="images/hero-text.png" alt="hero title">
-      </div>
-    </section>
-  </main>
-   
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero__container container">
+          <img src="images/hero-text.png" alt="hero title" />
+        </div>
+      </section>
+      <section class="section section--services">
+        <div class="container">
+          <h2 class="section__title">Creative Service</h2>
+          <p class="section__text">Congue leo eget malesuada. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+          <ul class="services">
+            <li class="services__item">
+              <h3 class="services__title">Interactive Elemenets</h3>
+              <p class="services__text">Class aptent taciti estied aliquam ellus pers piciat unde omnis dolorem dantium</p>
+              <a href="#" class="services__link">See Project</a>
+            </li>
+            <li class="services__item">
+              <h3 class="services__title">Custom Menus</h3>
+              <p class="services__text">Class aptent taciti estied aliquam ellus pers piciat unde omnis dolorem dantium</p>
+              <a href="#" class="services__link">See Project</a>
+            </li>
+            <li class="services__item">
+              <h3 class="services__title">Animated Counters</h3>
+              <p class="services__text">Class aptent taciti estied aliquam ellus pers piciat unde omnis dolorem dantium</p>
+              <a href="#" class="services__link">See Project</a>
+            </li>
+            <li class="services__item">
+              <h3 class="services__title">Easy to Customize</h3>
+              <p class="services__text">Class aptent taciti estied aliquam ellus pers piciat unde omnis dolorem dantium</p>
+              <a href="#" class="services__link">See Project</a>
+            </li>
+            <li class="services__item">
+              <h3 class="services__title">Online Store</h3>
+              <p class="services__text">Class aptent taciti estied aliquam ellus pers piciat unde omnis dolorem dantium</p>
+              <a href="#" class="services__link">See Project</a>
+            </li>
+            <li class="services__item">
+              <h3 class="services__title">Custom Page</h3>
+              <p class="services__text">Class aptent taciti estied aliquam ellus pers piciat unde omnis dolorem dantium</p>
+              <a href="#" class="services__link">See Project</a>
+            </li>
+
+            
+          </ul>
+        </div>
+      </section>
+    </main>
+
     <footer class="footer">
       <div class="container footer__container">
         <a class="footer__logo" href="#"
@@ -68,7 +120,8 @@
         <ul class="socials">
           <li class="socials__item">
             <a
-            href="https://facebook.com/" target="_blank"
+              href="https://facebook.com/"
+              target="_blank"
               class="link socials__link socials__link--theme-dark"
               aria-label="Link to agency facebook"
             >
@@ -79,7 +132,8 @@
           </li>
           <li class="socials__item">
             <a
-              href="https://twitter.com/" target="_blank"
+              href="https://twitter.com/"
+              target="_blank"
               class="link socials__link socials__link--theme-dark"
               aria-label="Link to agency twitter"
             >
@@ -90,7 +144,8 @@
           </li>
           <li class="socials__item">
             <a
-            href="https://linkedin.com/" target="_blank"
+              href="https://linkedin.com/"
+              target="_blank"
               class="link socials__link socials__link--theme-dark"
               aria-label="Link to agency linkedin"
             >
