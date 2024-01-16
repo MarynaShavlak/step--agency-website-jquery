@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Agency</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Vidaloka&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="searchBar.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+          <nav class="header__nav">
+            <a class="header__logo" href="#"
+            ><img src="images/logo.png" alt="agency-logo" width="168" height="50"
+          /></a>                
+                  <ul class="menu">
+                      <li class="menu__item"><a href="#" class="menu__link link menu__link--current">HOME</a></li>
+                      <li class="menu__item"><a href="#" class="menu__link link ">SERVICES</a></li>
+                      <li class="menu__item"><a href="#" class="menu__link link ">PORTFOLIO</a></li>
+                      <li class="menu__item"><a href="#" class="menu__link link ">ABOUT</a></li>
+                      <li class="menu__item"><a href="#" class="menu__link link ">PRICING</a></li>
+                      <li class="menu__item"><a href="#" class="menu__link link ">CONTACT</a></li>
+                  </ul>
+                 
+          </nav>
+          <div class="wrap">
+              <form action="" class="search-bar">
+                <input type="search" name="search" pattern=".*\S.*" required>
+                <button class="search-btn" type="submit">
+                  <span>Search</span>
+                </button>
+              </form>
+          </div>
+          
+      </div>
+          
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero__container container">
+        <img src="images/hero-text.png" alt="hero title">
+      </div>
+    </section>
+  </main>
+   
+    <footer class="footer">
+      <div class="container footer__container">
+        <a class="footer__logo" href="#"
+          ><img src="images/logo.png" alt="agency-logo" width="168" height="50"
+        /></a>
+        <p class="footer__rights">
+          © 2017 - <span>ThemeXpert</span> All Right Reserved
+        </p>
+        <ul class="socials">
+          <li class="socials__item">
+            <a
+            href="https://facebook.com/" target="_blank"
+              class="link socials__link socials__link--theme-dark"
+              aria-label="Link to agency facebook"
+            >
+              <svg class="socials__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a
+              href="https://twitter.com/" target="_blank"
+              class="link socials__link socials__link--theme-dark"
+              aria-label="Link to agency twitter"
+            >
+              <svg class="socials__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials__item">
+            <a
+            href="https://linkedin.com/" target="_blank"
+              class="link socials__link socials__link--theme-dark"
+              aria-label="Link to agency linkedin"
+            >
+              <svg class="socials__icon" width="20" height="20">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
