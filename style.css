@@ -437,6 +437,7 @@ nav {
   text-align: center;
   background-color: #24262e;
   background-image: url(images/gray-back.png);
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -499,4 +500,76 @@ nav {
 
 .subsc-form__btn:hover {
   background-color: #fff;
+}
+
+
+/* clients */
+
+.section--clients {
+  padding-top: 130px;
+  padding-bottom: 120px;
+  background-color: #24262e;
+  background-image: url(images/dark-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.title--clients {
+color: #fff;
+text-align: left;
+margin-bottom: 50px;
+}
+
+.text--clients {
+  color: #fff;
+  font-size: 16px;
+text-align: left;
+margin:0;
+margin-bottom: 125px;
+max-width: 900px;
+}
+
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1000px; /* Adjust the width as needed */
+  margin: auto;
+  gap: 50px;
+}
+
+.slider {
+   display: flex;
+   gap:150px;
+}
+
+.slide {
+  /* flex: 0 0 25%; */
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.indicator {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.indicator--active {
+  background-color: #ffeb3b;
 }
