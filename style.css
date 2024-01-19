@@ -675,9 +675,13 @@ nav {
   padding-top: 130px;
   padding-bottom: 120px;
   background-color: #24262e;
-  background-image: url(images/dark-back.png);
+  /* background-image: url(images/dark-back.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
+}
+
+.section--clients {
+  background-color: red;
 }
 
 .title--clients {
@@ -695,7 +699,7 @@ nav {
   max-width: 900px;
 }
 
-.slider-container {
+/* .slider-container {
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -711,14 +715,10 @@ nav {
 }
 
 .slide {
-  /* flex: 0 0 25%; */
-  box-sizing: border-box;
+  transition: order 0.5s ease-in-out;
 }
 
-.slide img {
-  width: 100%;
-  height: auto;
-}
+
 
 .indicators {
   display: flex;
@@ -736,4 +736,8 @@ nav {
 
 .indicator--active {
   background-color: #ffeb3b;
+} */
+
+.slide {
+  flex: 1;
 }
