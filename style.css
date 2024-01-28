@@ -675,13 +675,9 @@ nav {
   padding-top: 130px;
   padding-bottom: 120px;
   background-color: #24262e;
-  /* background-image: url(images/dark-back.png);
+  background-image: url(images/dark-back.png);
   background-repeat: no-repeat;
-  background-size: cover; */
-}
-
-.section--clients {
-  background-color: red;
+  background-size: cover;
 }
 
 .title--clients {
@@ -718,12 +714,12 @@ nav {
   transition: order 0.5s ease-in-out;
 }
 
-
+*/
 
 .indicators {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 50px;
 }
 
 .indicator {
@@ -736,8 +732,21 @@ nav {
 
 .indicator--active {
   background-color: #ffeb3b;
-} */
+}
 
 .slide {
   flex: 1;
+}
+
+#logo-image-1 {
+  width: 108px;
+}
+#logo-image-2 {
+  width: 166px;
+}
+#logo-image-3 {
+  width: 123px;
+}
+#logo-image-4 {
+  width: 127px;
 }

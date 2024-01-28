@@ -5,7 +5,7 @@ $(document).ready(function () {
   const achievementTextsList = $('.achievement-text');
   setAchievemenetSectionAnimation();
   addEventHandlers();
-  // setClientsSlider();
+  setClientsSlider();
 
   function isElementInViewport(element) {
     const rect = element[0].getBoundingClientRect();
@@ -59,48 +59,39 @@ $(document).ready(function () {
     $('.clear-btn').on('click', clearSearchBar);
   }
 
-  // function setClientsSlider() {
-  //   const totalSlides = $('.slide').length;
-  //   let currentSlide = 1;
+  function setClientsSlider() {
+    let currentIndex = 0;
+    let intervalId;
 
-  //   function showSlide(index) {
-  //     console.log('index: ', index);
-  //     $('.slide').css('order', function (i) {
-  //       return ((index + i - 1) % totalSlides) + 1;
-  //     });
-  //     $('.indicator').removeClass('indicator--active');
-  //     $('.indicator')
-  //       .eq(index - 1)
-  //       .addClass('indicator--active');
-  //     currentSlide = index;
-  //   }
+    function updateIndicators() {
+      $('.indicator').removeClass('indicator--active');
+      $('.indicator:eq(' + currentIndex + ')').addClass('indicator--active');
+    }
 
-  //   function nextSlide() {
-  //     currentSlide = (currentSlide % totalSlides) + 1;
-  //     showSlide(currentSlide);
-  //   }
+    function startInterval() {
+      intervalId = setInterval(function () {
+        currentIndex = (currentIndex + 1) % $('.indicator').length;
+        updateIndicators();
+      }, 3000);
+    }
 
-  //   function prevSlide() {
-  //     currentSlide = ((currentSlide - 2 + totalSlides) % totalSlides) + 1;
-  //     showSlide(currentSlide);
-  //   }
+    $('.owl-carousel').owlCarousel({
+      items: 4,
+      margin: 150,
+      loop: true,
+      autoplay: true,
+      autoplayTimeout: 3000,
+      autoplayHoverPause: true,
+    });
+    startInterval();
+    $('.owl-carousel').on('mouseover', function () {
+      clearInterval(intervalId);
+    });
 
-  //   $('.indicator').on('click', function () {
-  //     showSlide($(this).index() + 1);
-  //   });
+    $('.owl-carousel').on('mouseout', function () {
+      startInterval();
+    });
 
-  //   // setInterval(nextSlide, 1000);
-  // }
-
-  $('.owl-carousel').owlCarousel({
-    // items: 4,
-    margin: 150,
-    dots: true,
-    dotsContainer: '.indicators',
-    dotsEach: true,
-    // loop: true,
-    // autoplay: true,
-    // autoplayTimeout: 3000,
-    // autoplayHoverPause: true,
-  });
+    updateIndicators();
+  }
 });
