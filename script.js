@@ -6,6 +6,8 @@ $(document).ready(function () {
   setAchievemenetSectionAnimation();
   addEventHandlers();
   setClientsSlider();
+  setModal();
+  setPortfolioFilter();
 
   function isElementInViewport(element) {
     const rect = element[0].getBoundingClientRect();
@@ -93,5 +95,110 @@ $(document).ready(function () {
     });
 
     updateIndicators();
+  }
+
+  function subscribeWithEmail() {
+    const email = $('.modal-text').text();
+    console.log(' email : ', email);
+    handleModalCloseButtonClick();
+    resetSubscriptionData();
+  }
+
+  function resetSubscriptionData() {
+    $('.modal-text').text('');
+    $('.subsc-form__input').text('');
+    $('.subsc-form__input').val('');
+  }
+
+  function showModalBackdrop() {
+    $('.modal-backdrop').fadeIn('slow', function () {
+      $('body').addClass('modal-open');
+    });
+  }
+
+  function hideModalBackdrop() {
+    $('.modal-backdrop').fadeOut('slow', function () {
+      $('body').removeClass('modal-open');
+    });
+  }
+
+  function handleSubscriptionFormSubmit(e) {
+    e.preventDefault();
+    const isValid = isFormValid();
+    if (isValid) {
+      updateModalInterface();
+      showModalBackdrop();
+    }
+  }
+
+  function updateModalInterface() {
+    const inputValue = getInputValue();
+    $('.modal-text').text(inputValue);
+  }
+
+  function getInputValue() {
+    const userEmailInput = $('#user-email');
+    const inputValue = userEmailInput.val().trim();
+    return inputValue;
+  }
+
+  function isFormValid() {
+    const userEmailInput = $('#user-email');
+    const inputValue = getInputValue();
+    const isValid = inputValue !== '';
+
+    updateInputValidationClass(userEmailInput, isValid);
+
+    return isValid;
+  }
+
+  function updateInputValidationClass(inputElement, isValid) {
+    const errorClass = 'subsc-form__input--error';
+    inputElement.toggleClass(errorClass, !isValid);
+  }
+
+  function handleModalCloseButtonClick() {
+    hideModalBackdrop();
+  }
+
+  function setModal() {
+    $('.subsc-form').on('submit', handleSubscriptionFormSubmit);
+    $('.close-modal-btn').on('click', handleModalCloseButtonClick);
+    $('.modal-subscr-btn').on('click', subscribeWithEmail);
+  }
+
+  function updateFilterButtons(filters, chosenFilterBtn) {
+    filters.removeClass('filters__btn--active');
+    $(chosenFilterBtn).addClass('filters__btn--active');
+  }
+
+  function showFullPortfolio() {
+    $('[data-category]').removeClass('portfolio-item--hidden');
+  }
+
+  function showChosenCategoryWorks(chosenfilterCategory) {
+    $('[data-category]').each(function () {
+      const itemCategory = $(this).data('category');
+      if (chosenfilterCategory !== itemCategory) {
+        $(this).addClass('portfolio-item--hidden');
+      } else {
+        $(this).removeClass('portfolio-item--hidden');
+      }
+    });
+  }
+
+  function setPortfolioFilter() {
+    let chosenfilterCategory = 'all';
+    const filters = $('[data-filter]');
+    filters.on('click', function () {
+      updateFilterButtons(filters, this);
+
+      chosenfilterCategory = $(this).data('filter');
+      if (chosenfilterCategory === 'all') {
+        showFullPortfolio();
+      } else {
+        showChosenCategoryWorks(chosenfilterCategory);
+      }
+    });
   }
 });

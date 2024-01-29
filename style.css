@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -360,6 +363,7 @@ nav {
 
 .portfolio {
   display: flex;
+  transition: height 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .portfolio-wrap {
@@ -430,6 +434,10 @@ nav {
 
 .portfolio-item:hover .project__overlay {
   transform: translateY(0);
+}
+
+.portfolio-item--hidden {
+  display: none;
 }
 
 .project__link:hover {
@@ -605,10 +613,19 @@ nav {
   outline: none;
   background-color: rgba(138, 141, 145, 0.25);
   font-family: 'Open Sans', sans-serif;
+  transition: border 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.subsc-form__input--error {
+  border: 2px solid red;
 }
 
 .subsc-form__input::placeholder {
   color: #fff;
+}
+
+.subsc-form__input--error::placeholder {
+  color: red;
 }
 
 .subsc-form__btn {
@@ -749,4 +766,75 @@ nav {
 }
 #logo-image-4 {
   width: 127px;
+}
+
+.modal-backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  padding: 30px 15px;
+  width: 500px;
+}
+
+.close-modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  color: #000;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.close-icon {
+  font-size: 24px;
+}
+
+.close-modal-btn:hover {
+  color: #ffeb3b;
+  border: 1px solid #24262e;
+  background-color: #24262e;
+}
+
+.modal-subscr-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffeb3b;
+  text-transform: uppercase;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  color: #24262e;
+  width: 140px;
+  padding: 20px 53px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }

@@ -211,30 +211,46 @@
           </p>
           <ul class="filter-list">
             <li class="filters__item">
-              <button class="filters__btn filters__btn--active" type="button">
+              <button
+                class="filters__btn filters__btn--active"
+                type="button"
+                data-filter="all"
+              >
                 All
               </button>
             </li>
 
             <li class="filters__item">
-              <button class="filters__btn" type="button">Design</button>
+              <button class="filters__btn" type="button" data-filter="design">
+                Design
+              </button>
             </li>
 
             <li class="filters__item">
-              <button class="filters__btn" type="button">Code</button>
+              <button class="filters__btn" type="button" data-filter="code">
+                Code
+              </button>
             </li>
 
             <li class="filters__item">
-              <button class="filters__btn" type="button">Photography</button>
+              <button
+                class="filters__btn"
+                type="button"
+                data-filter="photography"
+              >
+                Photography
+              </button>
             </li>
 
             <li class="filters__item">
-              <button class="filters__btn" type="button">Apps</button>
+              <button class="filters__btn" type="button" data-filter="apps">
+                Apps
+              </button>
             </li>
           </ul>
         </div>
         <ul class="portfolio">
-          <li class="portfolio-item">
+          <li class="portfolio-item" data-category="apps">
             <div class="project__card-thumb">
               <img
                 src="images/img-1.png"
@@ -255,7 +271,7 @@
             </div>
           </li>
           <div class="portfolio-wrap">
-            <li class="portfolio-item">
+            <li class="portfolio-item" data-category="design">
               <div class="project__card-thumb">
                 <img src="images/img-6.png" alt="Photo of work in portfolio" />
                 <div class="project__overlay">
@@ -269,8 +285,7 @@
                 </div>
               </div>
             </li>
-
-            <li class="portfolio-item">
+            <li class="portfolio-item" data-category="apps">
               <div class="project__card-thumb">
                 <img src="images/img-2.png" alt="Photo of work in portfolio" />
                 <div class="project__overlay">
@@ -284,7 +299,7 @@
                 </div>
               </div>
             </li>
-            <li class="portfolio-item">
+            <li class="portfolio-item" data-category="code">
               <div class="project__card-thumb">
                 <img src="images/img-3.png" alt="Photo of work in portfolio" />
                 <div class="project__overlay">
@@ -298,7 +313,7 @@
                 </div>
               </div>
             </li>
-            <li class="portfolio-item">
+            <li class="portfolio-item" data-category="code">
               <div class="project__card-thumb">
                 <img src="images/img-4.png" alt="Photo of work in portfolio" />
                 <div class="project__overlay">
@@ -312,7 +327,7 @@
                 </div>
               </div>
             </li>
-            <li class="portfolio-item">
+            <li class="portfolio-item" data-category="photography">
               <div class="project__card-thumb">
                 <img src="images/img-5.png" alt="Photo of work in portfolio" />
                 <div class="project__overlay">
@@ -612,7 +627,7 @@
           <form class="subsc-form">
             <input
               class="subsc-form__input"
-              type="text"
+              type="email"
               name="user-email"
               id="user-email"
               placeholder="Your Mail"
@@ -621,6 +636,16 @@
           </form>
         </div>
       </section>
+      <div class="modal-backdrop">
+        <div class="modal">
+          <h3 class="modal-title">Your email for subscription</h3>
+          <p class="modal-text"></p>
+          <button type="button" class="modal-subscr-btn">Subscribe</button>
+          <button type="button" class="close-modal-btn">
+            <i class="fa-solid fa-xmark close-icon"></i>
+          </button>
+        </div>
+      </div>
     </main>
 
     <footer class="footer">
