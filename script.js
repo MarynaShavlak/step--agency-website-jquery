@@ -8,6 +8,26 @@ $(document).ready(function () {
   setClientsSlider();
   setModal();
   setPortfolioFilter();
+  setMobileMenu();
+
+  function setMobileMenu() {
+    $('.mobile-menu-open').on('click', function () {
+      $('.mobile-menu-container').animate(
+        {
+          left: 0,
+        },
+        300,
+      );
+    });
+    $('.mobile-menu-close').on('click', function () {
+      $('.mobile-menu-container').animate(
+        {
+          left: '100%',
+        },
+        300,
+      );
+    });
+  }
 
   function isElementInViewport(element) {
     const rect = element[0].getBoundingClientRect();

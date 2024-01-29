@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="searchBar.css" />
   </head>
   <body>
-    <!-- <header class="header">
+    <header class="header">
       <div class="header__container container">
         <nav class="header__nav">
           <a class="header__logo" href="#"
@@ -67,8 +67,11 @@
             <span class="clear-btn" id="clear-btn">X</span>
           </form>
         </div>
+        <button type="button" class="mobile-menu-open">
+          <i class="fa-solid fa-bars"></i>
+        </button>
       </div>
-    </header> -->
+    </header>
     <main>
       <section class="hero">
         <div class="hero__container container">
@@ -696,7 +699,32 @@
         </ul>
       </div>
     </footer>
+    <div class="mobile-menu-container" id="mobile-menu">
+      <button type="button" class="mobile-menu-close">
+        <i class="fa-solid fa-xmark close-icon"></i>
+      </button>
 
+      <ul class="mobile-menu">
+        <li class="menu__item">
+          <a href="#" class="menu__link link menu__link--current">HOME</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link link">SERVICES</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link link">PORTFOLIO</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link link">ABOUT</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link link">PRICING</a>
+        </li>
+        <li class="menu__item">
+          <a href="#" class="menu__link link">CONTACT</a>
+        </li>
+      </ul>
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
