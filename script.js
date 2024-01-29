@@ -78,12 +78,20 @@ $(document).ready(function () {
     }
 
     $('.owl-carousel').owlCarousel({
-      items: 4,
-      margin: 150,
       loop: true,
       autoplay: true,
       autoplayTimeout: 3000,
       autoplayHoverPause: true,
+      responsive: {
+        768: {
+          items: 3,
+          margin: 80,
+        },
+        1920: {
+          items: 4,
+          margin: 150,
+        },
+      },
     });
     startInterval();
     $('.owl-carousel').on('mouseover', function () {
