@@ -173,16 +173,16 @@ $(document).ready(function () {
   }
 
   function showFullPortfolio() {
-    $('[data-category]').removeClass('portfolio-item--hidden');
+    $('[data-category]').slideDown();
   }
 
   function showChosenCategoryWorks(chosenfilterCategory) {
     $('[data-category]').each(function () {
       const itemCategory = $(this).data('category');
       if (chosenfilterCategory !== itemCategory) {
-        $(this).addClass('portfolio-item--hidden');
+        $(this).slideUp(300);
       } else {
-        $(this).removeClass('portfolio-item--hidden');
+        $(this).slideDown();
       }
     });
   }
