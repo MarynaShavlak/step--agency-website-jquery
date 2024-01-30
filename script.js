@@ -109,7 +109,7 @@ $(document).ready(function () {
         },
         768: {
           items: 3,
-          margin: 80,
+          margin: 50,
         },
         1920: {
           items: 4,
