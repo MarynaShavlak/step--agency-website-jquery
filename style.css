@@ -138,7 +138,7 @@ nav {
   .mobile-menu-container {
     position: fixed;
     top: 0;
-    right: -100%;
+    right: -100vw;
     display: flex;
     justify-content: space-between;
     flex-direction: column;

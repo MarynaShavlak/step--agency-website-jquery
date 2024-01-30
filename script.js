@@ -22,7 +22,7 @@ $(document).ready(function () {
     $('.mobile-menu-close').on('click', function () {
       $('.mobile-menu-container').animate(
         {
-          right: '-100%',
+          right: '-100vw',
         },
         300,
       );
