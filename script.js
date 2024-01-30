@@ -14,7 +14,7 @@ $(document).ready(function () {
     $('.mobile-menu-open').on('click', function () {
       $('.mobile-menu-container').animate(
         {
-          left: 0,
+          right: 0,
         },
         300,
       );
@@ -22,7 +22,7 @@ $(document).ready(function () {
     $('.mobile-menu-close').on('click', function () {
       $('.mobile-menu-container').animate(
         {
-          left: '100%',
+          right: '-100%',
         },
         300,
       );

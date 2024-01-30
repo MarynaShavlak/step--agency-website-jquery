@@ -138,7 +138,7 @@ nav {
   .mobile-menu-container {
     position: fixed;
     top: 0;
-    left: 100%;
+    right: -100%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -214,9 +214,15 @@ nav {
 
 @media screen and (max-width: 767px) {
   .mobile-menu-container {
+    width: 100vw;
     padding-top: 30px;
     padding-bottom: 30px;
     padding-left: 40px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1919px) {
+  .mobile-menu-container {
+    width: 600px;
   }
 
   .menu__link {
